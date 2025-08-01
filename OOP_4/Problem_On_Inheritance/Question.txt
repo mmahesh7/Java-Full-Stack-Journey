@@ -1,0 +1,19 @@
+Write a Java program to create a vehicle class hierarchy. The base class should be Vehicle, with subclasses Truck, Car and Motorcycle. Each subclass should have properties such as make, model, year, and fuel type. Implement methods for calculating fuel efficiency, distance traveled, and maximum speed.
+
+
+
+How? 
+
+- To write a program for above question, we use Hierarchial Inheritance.
+          Vehicle
+          /  |  \
+       Car Truck Motorcycle
+
+- To ensure data privacy and encapsulation we declare the variables as private and use use getter() methods to access them.
+
+- We have also used abstract classes and abstract methods which ensures abstraction.
+
+- We have declared the parent class Vehicle as an abstract class, in which we have declared the following abstract methods which are further overriden by child classes.
+---->calculateFuelEfficiency()
+---->calculateDistanceTraveled()
+---->calculateMaxSpeed()
