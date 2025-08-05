@@ -1,4 +1,4 @@
-# OOP 6 – Exception Handling, Enums, Object Cloning & More
+# OOP 7 – Exception Handling, Enums, Object Cloning & More
 
 ## 1. Exception Handling in Java
 
