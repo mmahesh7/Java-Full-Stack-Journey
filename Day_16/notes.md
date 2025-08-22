@@ -1,4 +1,4 @@
-# Day 15 - Introduction to Databases and SQL Command Categories
+# Day 16 - Introduction to Databases and SQL Command Categories
 
 ## What is a Database?
 A database is an organized collection of structured information, or data, typically stored electronically in a computer system. Databases allow for data to be easily accessed, managed, modified, updated, and deleted. They serve as the backbone of various applications—everything from social media platforms to e-commerce websites and financial systems rely on databases to store user profiles, products, transactions, and more.
