@@ -31,7 +31,7 @@ ORDER BY column_name(s);
 
 ##  Key Rules & Restrictions
 
-###  What You CAN Do:
+###  What We CAN Do:
 ```sql
 -- Select grouped columns
 SELECT department FROM employees GROUP BY department;
@@ -44,7 +44,7 @@ SELECT department, YEAR(joining_date) FROM employees
 GROUP BY department, YEAR(joining_date);
 ```
 
-###  What You CANNOT Do:
+###  What We CANNOT Do:
 ```sql
 -- This will cause an error
 SELECT * FROM employees GROUP BY department;
