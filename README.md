@@ -36,7 +36,7 @@ This repository documents my **daily progress**, from **Core Java & DSA** to **S
  ┣ 📂 Day_9                    # Threads, Multithreading and Exception Handling
  ┣ 📂 Day_10-13                # Personal Finance Tracker Project (real project using OOP concepts)
  ┣ 📂 Day_14-15                # Streams
- ┣ 📂 Day_16-21                # Databases - SQL & MySQL
+ ┣ 📂 Day_16-22                # Databases - SQL & MySQL
  ┣ 📂 Core_Java
  ┣ 📂 Java8_Features
  ┣ 📂 MySQL
