@@ -209,3 +209,8 @@ join orders o on c.customer_id = o.customer_id
 join order_items oi on oi.order_id = o.order_id
 where c.state = "ca"); 
 
+--  Show customer details with their total spending
+SELECT c.*, 
+       (SELECT SUM(total_amount) FROM orders WHERE customer_id = c.customer_id) AS total_spent
+FROM customers c
+WHERE (SELECT SUM(total_amount) FROM orders WHERE customer_id = c.customer_id) > 500;
