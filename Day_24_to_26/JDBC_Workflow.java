@@ -1,9 +1,8 @@
-package Day_24;
+package Day_24_to_26;
 
 import java.math.BigDecimal;
 import java.sql.*;
 import java.util.Date;
-import java.util.Properties;
 
 public class JDBC_Workflow {
     private static final String URL = "jdbc:mysql://localhost:3306/bookstore";

@@ -1,4 +1,4 @@
-package Day_24;
+package Day_24_to_26;
 
 import java.sql.*;
 

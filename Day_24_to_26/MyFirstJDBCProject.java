@@ -1,4 +1,4 @@
-package Day_24;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+package Day_24_to_26;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 
 import java.sql.*;
