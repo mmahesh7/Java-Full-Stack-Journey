@@ -85,7 +85,7 @@ The system is built with **3 distinct layers** following enterprise best practic
 2. **Set Up Database**
 
     * Import the SQL schema (provided in `/db` folder)
-    * Update DB credentials in `DBConnection.java`
+    * Update DB credentials in `DatabaseConnection.java`
 
 3. **Compile and Run**
 
@@ -135,6 +135,6 @@ Enter choice:
 
 * 🚀 Full Stack Java Developer (in progress)
 * 📖 Currently on a **Java Full Stack Learning Journey**
-* 🔗 [LinkedIn]() | [GitHub](https://github.com/mmahesh7)
+* 🔗 [LinkedIn](https://www.linkedin.com/in/mmahesh7) | [GitHub](https://github.com/mmahesh7)
 
 ---
