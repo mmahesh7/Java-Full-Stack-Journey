@@ -1,7 +1,7 @@
-package Day_27.library_management_system.src.main.java.com.library.dao;
+package Day_27To31.library_management_system.src.main.java.com.library.dao;
 
-import Day_27.library_management_system.src.main.java.com.library.model.Member;
-import Day_27.library_management_system.src.main.java.com.library.util.DatabaseConnection;
+import Day_27To31.library_management_system.src.main.java.com.library.model.Member;
+import Day_27To31.library_management_system.src.main.java.com.library.util.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class MemberDAO {
     private static final String CHECK_EMAIL_EXISTS =
             "SELECT COUNT(*) FROM members WHERE email = ? AND member_id != ?";
     private static final String GET_MEMBER_LOAN_COUNT =
-            "SELECT COUNT(*) FROM book_loans WHERE member_id = ? AND status = 'ACTIVE'";
+            "SELECT COUNT(*) FROM book_loans WHERE member_id = ? AND status IN ('ACTIVE', 'OVERDUE') AND return_date IS NULL";
     private static final String SEARCH_MEMBERS_BY_NAME =
             "SELECT * FROM members WHERE name LIKE ? ORDER BY name";
 
@@ -208,11 +208,14 @@ public class MemberDAO {
             pstmt.setInt(1, memberId);
             rs = pstmt.executeQuery();
 
-            if(rs.next()) {
-                return rs.getInt(1);
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                System.out.println("DEBUG: Member " + memberId + " has " + count + " active loans");
+                return count;
             }
         } catch (SQLException e) {
-            System.err.println("Error getting loan count: "+e.getMessage());
+            System.err.println("Error getting loan count: " + e.getMessage());
+            e.printStackTrace();
         } finally {
             closeResources(conn, pstmt, rs);
         }

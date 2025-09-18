@@ -1,4 +1,4 @@
-package Day_27.library_management_system.src.main.java.com.library.model;
+package Day_27To31.library_management_system.src.main.java.com.library.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -85,7 +85,7 @@ public class BookLoan {
 
     // Business methods
     public boolean isOverdue() {
-        return status == LoanStatus.ACTIVE && LocalDate.now().isAfter(dueDate);
+        return (status == LoanStatus.ACTIVE || status == LoanStatus.OVERDUE)  && LocalDate.now().isAfter(dueDate);
     }
 
     public long getDaysOverdue() {

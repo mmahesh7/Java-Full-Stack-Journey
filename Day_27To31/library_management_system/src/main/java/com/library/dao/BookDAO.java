@@ -1,7 +1,7 @@
-package Day_27.library_management_system.src.main.java.com.library.dao;
+package Day_27To31.library_management_system.src.main.java.com.library.dao;
 
-import Day_27.library_management_system.src.main.java.com.library.model.Book;
-import Day_27.library_management_system.src.main.java.com.library.util.DatabaseConnection;
+import Day_27To31.library_management_system.src.main.java.com.library.model.Book;
+import Day_27To31.library_management_system.src.main.java.com.library.util.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -215,9 +215,29 @@ public class BookDAO {
 
         try {
             conn = DatabaseConnection.getConnection();
-            pstmt = conn.prepareStatement(UPDATE_COPIES);
+
+            // First, get current values to validate the change
+            Book currentBook = getBookById(bookId);
+            if (currentBook == null) {
+                System.out.println("Book not found");
+                return false;
+            }
+
+            int newAvailable = currentBook.getCopiesAvailable() + changeInCopies;
+            if (newAvailable < 0) {
+                System.out.println("Cannot reduce copies below 0");
+                return false;
+            }
+
+            // Update both copies_available and total_copies
+            String sql = "UPDATE books SET copies_available = copies_available + ?, " +
+                    "total_copies = GREATEST(total_copies, copies_available + ?) " +
+                    "WHERE book_id = ?";
+
+            pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, changeInCopies);
-            pstmt.setInt(2, bookId);
+            pstmt.setInt(2, changeInCopies);
+            pstmt.setInt(3, bookId);
 
             int rowsAffected = pstmt.executeUpdate();
             return rowsAffected > 0;

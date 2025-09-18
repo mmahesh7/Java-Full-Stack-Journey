@@ -1,4 +1,4 @@
-package Day_27.library_management_system.src.main.java.com.library.model;
+package Day_27To31.library_management_system.src.main.java.com.library.model;
 
 public class Author {
     private int authorId;

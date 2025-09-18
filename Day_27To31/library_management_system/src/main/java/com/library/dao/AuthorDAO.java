@@ -1,7 +1,7 @@
-package Day_27.library_management_system.src.main.java.com.library.dao;
+package Day_27To31.library_management_system.src.main.java.com.library.dao;
 
-import Day_27.library_management_system.src.main.java.com.library.model.Author;
-import Day_27.library_management_system.src.main.java.com.library.util.DatabaseConnection;
+import Day_27To31.library_management_system.src.main.java.com.library.model.Author;
+import Day_27To31.library_management_system.src.main.java.com.library.util.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ public class AuthorDAO {
     private static final String UPDATE_AUTHOR =
             "UPDATE AUTHORS SET NAME = ?, EMAIL =?, BIRTH_YEAR = ?, BIOGRAPHY = ? WHERE AUTHOR_ID = ?";
     private static final String DELETE_AUTHOR =
-            "DELETE FROM AUHTORS WHERE AUTHOR_ID = ?";
+            "DELETE FROM AUTHORS WHERE AUTHOR_ID = ?";
     private static final String CHECK_AUTHOR_EXISTS =
             "SELECT COUNT(*) FROM AUTHORS WHERE email = ?";
 
